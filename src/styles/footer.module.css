@@ -1,0 +1,15 @@
+.footerList { 
+
+  background-color: #d5d5d5;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+.footerList h5 { font-size: 1.1rem; margin: 0.8rem 0;}
+.footerList ul { margin: 0; padding: 0;}
+
+.footerList ul li {  list-style-type: none; }
+
+.footerList ul li a {   color: #000000; text-decoration: none; font-size: 1rem; margin: 6px 0; display: inline-block; }
+
+.footerList ul li a:hover {  color: orange;  }
+

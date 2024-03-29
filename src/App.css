@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+.product_list .imgholder {
+  padding: 1rem;
+  background: #f1ece8;
+  border-radius: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product_list .imgholder img {
+  height: 120px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product_list .title a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Navbar */
+
+.cartItems {
+  color: black;
+}
+
+.cartItems .count {
+  display: inline-block;
+  position: absolute;
+  font-size: 80%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: orange;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cartItems .count span {
+  position: absolute;
+  top: -1px;
+  right: 50%;
+
+  width: 50%;
+  transform: translateX(50%);
+}
+.wishlistItems{
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* navbar-end */
+
+.product_list .title a:hover {
+  color: rgb(218, 128, 38);
+}
+
+.container {
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+}
+
+
+input[type="checkbox"] + label {
+  margin-left: 5px;
+}
+
+@media (max-width: 992px) {
+  .lg_show {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mb_serchbar {
+    background-color: rgb(191, 191, 191);
+    position: absolute;
+    top: 60px;
+    z-index: 999;
+    width: 100%;
   }
+
+  .mb_serchbar div {
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mb_show {
+    display: none;
+  }
+}
+
+.serchIcons {
+  font-size: 1.3rem;
+}
+
+.serchIcons svg {
+  display: inline-block;
+  margin-left: 1.8rem;
+}
+
+/* feature section styles */
+
+.product-section .pro-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 60px;
+}
+.product-section h1,
+.product-section p {
+  text-align: center;
+}
+.product-section .product-cart {
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+  border: 1px solid #ebebeb;
+  padding: 13px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  transition: box-shadow 0.2s;
+}
+
+.product-section .product-cart:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+.product-section .product-cart img {
+  width: 100%;
+  border-radius: 25px;
+}
+.product-section .product-cart span {
+  color: #969696;
+  font-weight: 500;
+  line-height: 30px;
+}
+.product-section .product-cart h4 {
+  font-size: 18px;
+  color: rgb(41, 41, 41);
+}
+.product-section .product-cart .stars {
+  color: #e6ae2c;
+  padding: 6px 0;
+}
+.product-section .product-cart .price {
+  color: #088178;
+  padding: 4px 0;
+}
+.product-section .product-cart .buy-icon {
+  color: #088178;
+  background-color: #c7e9e75e;
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .filterBlock {
+    display: none;
+  }
+}
+
+.filterBlock {
+  background-color: #dfd7d7;
+  padding: 2rem;
+}
+
+.fillterMb {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .fillterMb {
+    display: block;
+  }
+}
+
+.div1 {
+  background-color: aqua;
+  border-radius: 5%;
+  padding: 2rem;
+  margin-left: 2rem;
+}
+
+.img-container {
+  background-color: #969696;
+  padding: 1rem;
+  border-radius: 10%;
+}
+
+/* hero section styles */
+
+#hero {
+  position: absolute;
+  z-index: 999;
+  padding-left: 25px;
+  margin-left: 7%;
+  margin-top: 7%;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 575.98px) {
+  #hero {
+    padding-left: 13px;
+    margin-top: 10px;
+    margin-left: 0%;
+  }
+
+  
+}
+
+#hero h4 {
+  font-size: 2.4
+  vw;
+  color: #4169a0;
+  
+ 
+}
+#hero h2 {
+  font-size: 3.1vw;
+}
+#hero h1 {
+  color: #088178;
+  font-size: 4.5vw;
+}
+
+
+#hero button {
+  background-image: url(./images/button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  margin-top: 5%;
+
+  border: 0;
+  cursor: pointer;
+  font-size: 2vw;
+  font-weight: 700;
+  color: #545c5c;
+  background-color: transparent;
+}
+
+#hero button:hover {
+  color: #088178;
 }
