@@ -1,4 +1,3 @@
-// NavbarAd.js
 import React, { useState } from 'react';
 import { FaRegUser } from 'react-icons/fa';
 import { FaRegHeart } from 'react-icons/fa6';
@@ -7,9 +6,7 @@ import styles from '../styles/Navbar.module.css';
 import Brand1 from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
-//import SearchRes from './SearchRes';
 import { useSelector } from 'react-redux';
-//import FilterComponent from './FilterComponent';
 
 function NavbarAd() {
   const cart = useSelector((state) => state.cart);
