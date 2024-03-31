@@ -4,14 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
-import Smartphones from "./pages/Smartphones";
+import Smartphones from "./pages/Furniture";
 import Footer from "./components/Footer";
 import SearchResults from "./pages/SearchResults";
 import Navbar from "./components/Navbar";
-import Cart from './pages/Cart'
-import Motorcycles from './pages/Motorcycles'
-import Skincare from './pages/Skincare'
-
+import Cart from "./pages/Cart";
+import Motorcycles from "./pages/Motorcycles";
+import Skincare from "./pages/Skincare";
 
 //redux
 import { Provider } from "react-redux";
@@ -23,25 +22,23 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-
       <BrowserRouter>
-        <Navbar/>
+        <Navbar />
         <Routes>
-
           <Route path="/" element={<App />} />
-          <Route path="/smartphone" element={<Smartphones />} />
-          <Route path="/motorcycle" element={<Motorcycles/>} />
-          <Route path="/skincare" element={<Skincare/>} />
+          <Route path="/furniture" element={<Smartphones />} />
+          <Route path="/motorcycle" element={<Motorcycles />} />
+          <Route path="/skincare" element={<Skincare />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/shop/:id/:title" element={<ProductDetails/>} />
-          <Route path="/search-result/:searchValue" element={<SearchResults/>} />
-
+          <Route path="/shop/:id/:title" element={<ProductDetails />} />
+          <Route
+            path="/search-result/:searchValue" element={<SearchResults />}
+          />
         </Routes>
-        
+
         <Footer />
       </BrowserRouter>
-
     </Provider>
   </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
-import { RiStarSLine } from "react-icons/ri";
+import { AiFillStar } from "react-icons/ai";
 
 export default function SearchResults() {
 
@@ -40,9 +40,15 @@ const [products, setProducts] = useState([]);
           <section className="col-xl-3 col-lg-4 col-md-4 col-sm-6 product-section mb-3" key={item.id} >
 
             <div className="product_list product-cart mt-3">
-              <div className="imgholder text-center">
+
+            <Link to={`/shop/${item.id}/${item.title.replace(/\s+/g, "-").toLowerCase()}`} >
+                  
+            <div className="imgholder text-center">
                 <img  className="img-fluid"  src={item.images[0]} alt={item.title} />
               </div>
+
+                </Link>{" "}
+              
 
               <span>{item.category}</span>
 
@@ -53,12 +59,32 @@ const [products, setProducts] = useState([]);
                 </Link>{" "}
               </div>
 
-              <div className="stars">
-                {item.rating}
-                <RiStarSLine />
-              </div>
+              <div className="stars d-flex align-items-center">
+                  {item.rating.toFixed(1)}
+                  <AiFillStar />
+                </div>
+                <div className="d-flex justify-content-between">
+                  <div>
+                    <span className="discounted-price">
+                      ₹
+                      {(
+                        item.price * 80 -
+                        (item.price * 80 * item.discountPercentage) / 100
+                      ).toFixed(0)}
+                    </span>
+                    <span className="price">₹{item.price * 80}</span>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span className="discount">
+                      {" "}
+                      ({item.discountPercentage}% OFF)
+                    </span>
+                  </div>
+                </div>
 
-              <h4 className="price">${item.price}</h4>
+              
             </div>
 
           </section>

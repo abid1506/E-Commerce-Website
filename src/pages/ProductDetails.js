@@ -56,15 +56,19 @@ export default function ProductDetails() {
               <div className="title mt-2">
                 {" "}
                 <h4>{values.title}</h4>
-              </div>              
+              </div>          
 
-              <div className="stars">
-                {values.rating}
-                <RiStarSLine />
-              </div>
+              <div className="stars d-flex align-items-center ">
+              {values.rating}
+              <RiStarSLine />
+            </div>    
 
-              <div className="price">
-                <span className="sale">${values.price}</span>
+             
+
+              <div className="">
+                
+                <span>₹{(values.price * 80 - (values.price * 80 * values.discountPercentage)/ 100).toFixed(0) }</span>
+                <span className="price">₹{values.price*80}</span>
                 <span className="discount"> ({values.discountPercentage}% OFF) </span>
               </div>
 

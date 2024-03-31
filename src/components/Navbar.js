@@ -40,8 +40,8 @@ function NavbarAd() {
 
         <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
           <li>
-            <Link to="/smartphone" className={`${styles.navLink}`}>
-              <span> Smartphones </span>
+            <Link to="/furniture" className={`${styles.navLink}`}>
+              <span> Furnitures </span>
             </Link>
           </li>
 

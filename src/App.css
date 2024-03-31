@@ -136,19 +136,39 @@ input[type="checkbox"] + label {
   color: #969696;
   font-weight: 500;
   line-height: 30px;
+  margin-right: 6px;
 }
 .product-section .product-cart h4 {
   font-size: 18px;
   color: rgb(41, 41, 41);
 }
 .product-section .product-cart .stars {
-  color: #e6ae2c;
+  color: #088178;
+  font-weight: 600;
   padding: 6px 0;
+  font-size: .9rem;
 }
 .product-section .product-cart .price {
+  color: grey;
+  padding: 4px 0;
+  text-decoration: line-through;
+  font-size: .8rem;
+}
+
+.product-section .product-cart .discounted-price{
+  color: rgba(22, 22, 22, 0.79);
+  font-size: .9rem;
+  
+}
+
+.product-section .product-cart .discount {
   color: #088178;
   padding: 4px 0;
+ 
+  
 }
+
+
 .product-section .product-cart .buy-icon {
   color: #088178;
   background-color: #c7e9e75e;
